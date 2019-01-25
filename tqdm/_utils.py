@@ -197,7 +197,7 @@ def _environ_cols_windows(fp):  # pragma: no cover
             (_bufx, _bufy, _curx, _cury, _wattr, left, _top, right, _bottom,
              _maxx, _maxy) = struct.unpack("hhhhHhhhhhh", csbi.raw)
             # nlines = bottom - top + 1
-            return right - left  # +1
+            return right - left - 1 # +1
     except:
         pass
     return None
